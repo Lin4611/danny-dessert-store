@@ -37,22 +37,25 @@ const AppHeader = () => {
             </button>
           </div>
         </section>
-        <section className="flex sm:hidden md:hidden lg:hidden w-full items-center px-3 py-5 relative">
-          <div className="w-full flex items-center justify-end">
-            <img
-              src={logo}
+        <section className="flex sm:hidden md:hidden lg:hidden w-full items-center px-3 py-5 relative z-10">
+          <div className="w-full flex items-center justify-end h-[29px] gap-[76px]">
+            <div className="max-w-[145px] w-full h-full">
+              <img
+              src={phone_logo}
               alt="logo"
-              className="max-w-[142px] h-full object-cover w-full m-auto"
+              className=" w-full h-[29px] object-contain m-auto"
             />
+            </div>
+            
             <button
               type="button"
-              className="max-w-7 w-full h-5 justify-self-end active:rounded-full active:shadow-2xl active:shadow-secondary-default"
+              className="max-w-7 w-full h-5 active:rounded-full active:shadow-2xl active:shadow-secondary-default"
               onClick={() => setIsMenu(!isMenu)}
             >
               <img
                 src={menu_icon}
                 alt="menu"
-                className="w-full object-cover "
+                className="w-full h-full object-cover "
               />
             </button>
           </div>
