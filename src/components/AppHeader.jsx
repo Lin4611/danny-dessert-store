@@ -9,7 +9,7 @@ const AppHeader = () => {
   const [isMenu, setIsMenu] = useState(false);
   return (
     <>
-      <header className="w-full bg-[#0037C0]">
+      <header className="w-full bg-primary-default">
         <section className="hidden sm:flex md:flex lg:flex justify-between items-center w-full px-20 pt-15 sm:px-8 sm:max-w-3xl md:max-w-5xl lg:max-w-[1920px]">
           <img
             src={logo}
@@ -19,19 +19,19 @@ const AppHeader = () => {
           <div className="flex max-w-[177px] w-full justify-between items-center">
             <button
               type="button"
-              className="w-[70px] h-[70px] flex justify-center items-center hover:rounded-full hover:shadow-2xl hover:shadow-[#F7F3D6]"
+              className="w-[70px] h-[70px] flex justify-center items-center hover:rounded-full hover:shadow-2xl hover:shadow-secondary-default"
             >
               <UserIcon
-                className="w-9 h-9 text-[#FBF8EB] aspect-square"
+                className="w-9 h-9 text-secondary-light aspect-square"
                 color="currentColor"
               />
             </button>
             <button
               type="button"
-              className="w-[70px] h-[70px] flex justify-center items-center hover:rounded-full hover:shadow-2xl hover:shadow-[#F7F3D6]"
+              className="w-[70px] h-[70px] flex justify-center items-center hover:rounded-full hover:shadow-2xl hover:shadow-secondary-default"
             >
               <CartIcon
-                className="w-9 h-9 text-[#FBF8EB] aspect-square"
+                className="w-9 h-9 text-secondary-light aspect-square"
                 color="currentColor"
               />
             </button>
@@ -46,7 +46,7 @@ const AppHeader = () => {
             />
             <button
               type="button"
-              className="max-w-7 w-full h-5 justify-self-end active:rounded-full active:shadow-2xl active:shadow-[#F7F3D6]"
+              className="max-w-7 w-full h-5 justify-self-end active:rounded-full active:shadow-2xl active:shadow-secondary-default"
               onClick={() => setIsMenu(!isMenu)}
             >
               <img
@@ -59,12 +59,12 @@ const AppHeader = () => {
           <div
             className={`${
               isMenu ? "flex" : "hidden"
-            } fixed inset-0 z-20 w-full h-full bg-[#F7F3D6] pt-5 flex-col items-center px-2.5 scroll-auto`}
+            } fixed inset-0 z-20 w-full h-full bg-secondary-default pt-5 flex-col items-center px-2.5 scroll-auto`}
           >
             <div className="flex w-full h-[47px] mb-[71px] justify-end">
               <button
                 type="button"
-                className="max-w-[47px] w-full h-[47px] flex justify-center items-center active:rounded-full active:shadow-2xl active:shadow-[#F7F3D6] "
+                className="max-w-[47px] w-full h-[47px] flex justify-center items-center active:rounded-full active:shadow-2xl active:shadow-secondary-default"
                 onClick={() => setIsMenu(!isMenu)}
               >
                 <img
@@ -87,7 +87,7 @@ const AppHeader = () => {
                 href="#"
                 className="w-full py-2.5 flex items-center justify-center"
               >
-                <span className="text-[#0037C0] text-xl font-bold tracking-[1.6px]">
+                <span className="text-primary-default label-lg">
                   New
                 </span>
               </a>
@@ -95,7 +95,7 @@ const AppHeader = () => {
                 href="#"
                 className="w-full py-2.5 flex items-center justify-center"
               >
-                <span className="text-[#0037C0] text-xl font-bold tracking-[1.6px]">
+                <span className="text-primary-default label-lg">
                   ABOUT
                 </span>
               </a>
@@ -103,7 +103,7 @@ const AppHeader = () => {
                 href="#"
                 className="w-full py-2.5 flex items-center justify-center"
               >
-                <span className="text-[#0037C0] text-xl font-bold tracking-[1.6px]">
+                <span className="text-primary-default label-lg">
                   PRODUCT
                 </span>
               </a>
@@ -111,7 +111,7 @@ const AppHeader = () => {
                 href="#"
                 className="w-full py-2.5 flex items-center justify-center"
               >
-                <span className="text-[#0037C0] text-xl font-bold tracking-[1.6px]">
+                <span className="text-primary-default label-lg">
                   REVIEW
                 </span>
               </a>
@@ -119,19 +119,19 @@ const AppHeader = () => {
             <div className="flex max-w-[125px] w-full h-[70px] justify-between items-center mt-[58px]">
               <button
                 type="button"
-                className="w-[70px] h-[70px] flex justify-center items-center hover:rounded-full hover:shadow-2xl hover:shadow-[#F7F3D6]"
+                className="w-[70px] h-[70px] flex justify-center items-center hover:rounded-full hover:shadow-2xl hover:shadow-secondary-default"
               >
                 <UserIcon
-                  className="w-9 h-9 text-[#0037C0] aspect-square"
+                  className="w-9 h-9 text-primary-default aspect-square"
                   color="currentColor"
                 />
               </button>
               <button
                 type="button"
-                className="w-[70px] h-[70px] flex justify-center items-center hover:rounded-full hover:shadow-2xl hover:shadow-[#F7F3D6]"
+                className="w-[70px] h-[70px] flex justify-center items-center hover:rounded-full hover:shadow-2xl hover:shadow-secondary-default"
               >
                 <CartIcon
-                  className="w-9 h-9 text-[#0037C0] aspect-square"
+                  className="w-9 h-9 text-primary-default aspect-square"
                   color="currentColor"
                 />
               </button>
