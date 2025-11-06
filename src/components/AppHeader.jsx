@@ -1,14 +1,10 @@
 import logo from "../assets/img/logo.png";
-import user_icon from "../assets/img/icon/user-icon.svg";
-import cart_icon from "../assets/img/icon/cart-icon.svg";
 import phone_logo from "../assets/img/phone-logo.png";
 import menu_icon from "../assets/img/icon/menu.svg";
 import close_icon from "../assets/img/icon/close _icon.svg";
 import { useState } from "react";
-const iconlist = [
-  { imgUrl: user_icon, name: "user" },
-  { imgUrl: cart_icon, name: "cart" },
-];
+import { UserIcon } from "./UserIcon";
+import { CartIcon } from "./CartIcon";
 const AppHeader = () => {
   const [isMenu, setIsMenu] = useState(false);
   return (
@@ -21,19 +17,24 @@ const AppHeader = () => {
             className="max-w-[396px] w-full h-full object-cover"
           />
           <div className="flex max-w-[177px] w-full justify-between items-center">
-            {iconlist.map((p, i) => (
-              <button
-                key={i}
-                type="button"
-                className="w-[70px] h-[70px] flex justify-center items-center hover:rounded-full hover:shadow-2xl hover:shadow-[#F7F3D6]"
-              >
-                <img
-                  src={p.imgUrl}
-                  alt={p.name}
-                  className="w-9 h-9 aspect-square object-cover"
-                />
-              </button>
-            ))}
+            <button
+              type="button"
+              className="w-[70px] h-[70px] flex justify-center items-center hover:rounded-full hover:shadow-2xl hover:shadow-[#F7F3D6]"
+            >
+              <UserIcon
+                className="w-9 h-9 text-[#FBF8EB] aspect-square"
+                color="currentColor"
+              />
+            </button>
+            <button
+              type="button"
+              className="w-[70px] h-[70px] flex justify-center items-center hover:rounded-full hover:shadow-2xl hover:shadow-[#F7F3D6]"
+            >
+              <CartIcon
+                className="w-9 h-9 text-[#FBF8EB] aspect-square"
+                color="currentColor"
+              />
+            </button>
           </div>
         </section>
         <section className="flex sm:hidden md:hidden lg:hidden w-full items-center px-3 py-5 relative">
@@ -116,19 +117,24 @@ const AppHeader = () => {
               </a>
             </nav>
             <div className="flex max-w-[125px] w-full h-[70px] justify-between items-center mt-[58px]">
-              {iconlist.map((p, i) => (
-                <button
-                  key={i}
-                  type="button"
-                  className="w-[70px] h-full flex justify-center items-center hover:rounded-full hover:shadow-2xl hover:shadow-[#F7F3D6]"
-                >
-                  <img
-                    src={p.imgUrl}
-                    alt={p.name}
-                    className="w-9 h-9 aspect-square object-cover"
-                  />
-                </button>
-              ))}
+              <button
+                type="button"
+                className="w-[70px] h-[70px] flex justify-center items-center hover:rounded-full hover:shadow-2xl hover:shadow-[#F7F3D6]"
+              >
+                <UserIcon
+                  className="w-9 h-9 text-[#0037C0] aspect-square"
+                  color="currentColor"
+                />
+              </button>
+              <button
+                type="button"
+                className="w-[70px] h-[70px] flex justify-center items-center hover:rounded-full hover:shadow-2xl hover:shadow-[#F7F3D6]"
+              >
+                <CartIcon
+                  className="w-9 h-9 text-[#0037C0] aspect-square"
+                  color="currentColor"
+                />
+              </button>
             </div>
           </div>
         </section>
